@@ -1,3 +1,4 @@
+@use "../../../../styles/common/color.scss";
 $half-margin: 30px;
 
 .ContentList {
@@ -10,7 +11,7 @@ $half-margin: 30px;
       font-size: 2em;
       .Content__Title__Colored {
         font-weight: 600;
-        color: red;
+        color: color.$hl-heavy;
         margin-right: 0.25em;
       }
     }
