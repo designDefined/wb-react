@@ -1,0 +1,21 @@
+$half-margin: 30px;
+
+.ContentList {
+  padding-top: $half-margin * 4;
+  padding-bottom: $half-margin * 4;
+
+  .Content--Outside {
+    margin-top: $half-margin;
+    .Content__Title {
+      font-size: 2em;
+      .Content__Title__Colored {
+        color: red;
+        margin-right: 0.25em;
+      }
+    }
+    .Content__Introduction {
+    }
+  }
+  .Content--Inside {
+  }
+}

@@ -1,10 +1,19 @@
 import "./ActText.scss";
-
+import Header from "./Header/Header";
+import Introduction from "./Introduction/Introduction";
+import PleaseScrollDown from "../../common/PleaseScrollDown/PleaseScrollDown";
+import ContentList from "./ContentList/ContentList";
 const ActText = () => {
-  console.log("running");
   return (
-    <div>
-      <h1>텍스트 페이지 입니다</h1>
+    <div className="Page--ActText">
+      <div className="HeaderContainer">
+        <Header />
+        <Introduction />
+      </div>
+      <PleaseScrollDown />
+      <div className="ContentListContainer">
+        <ContentList />
+      </div>
     </div>
   );
 };

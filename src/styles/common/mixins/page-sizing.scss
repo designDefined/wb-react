@@ -1,0 +1,15 @@
+@use "./flexbox.scss";
+$safe-width: 800px;
+
+@mixin safe-wrapper {
+  @include flexbox.vertical($sub-axis: center);
+  position: relative;
+  width: 100vw;
+}
+
+@mixin safe-content {
+  position: relative;
+  width: 100%;
+  max-width: $safe-width;
+  padding: 10px;
+}

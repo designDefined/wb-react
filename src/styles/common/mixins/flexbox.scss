@@ -1,0 +1,12 @@
+@mixin vertical($main-axis: flex-start, $sub-axis: stretch) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $main-axis;
+  align-items: $sub-axis;
+}
+
+@mixin horizontal($main-axis: flex-start, $sub-axis: stretch) {
+  display: flex;
+  justify-content: $main-axis;
+  align-items: $sub-axis;
+}

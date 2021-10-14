@@ -1,0 +1,8 @@
+@use "../../../../styles/common/mixins/flexbox.scss";
+
+.Header {
+  @include flexbox.horizontal(center, center);
+  h1 {
+    font-size: 10em;
+  }
+}

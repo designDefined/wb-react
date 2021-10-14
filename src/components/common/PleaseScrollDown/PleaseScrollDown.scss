@@ -1,0 +1,8 @@
+@use "../../../styles/common/mixins/flexbox.scss";
+
+.PleaseScrollDown {
+  @include flexbox.horizontal(center, center);
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+}
