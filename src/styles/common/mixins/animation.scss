@@ -1,0 +1,36 @@
+@mixin blink($time: 1s) {
+  animation: $time infinite alternate _blink;
+}
+
+@mixin blinkN($time: 1s, $count: 3) {
+  opacity: 0%;
+  animation: $time $count * 2 alternate-reverse _blink;
+}
+
+@keyframes _blink {
+  0% {
+    opacity: 100%;
+  }
+
+  10% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+@mixin appear($time: 0.5s) {
+  animation: $time ease-out _appear;
+}
+
+@keyframes _appear {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}

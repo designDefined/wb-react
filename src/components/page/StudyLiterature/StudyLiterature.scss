@@ -1,0 +1,37 @@
+@use "../../../styles/common/mixins/page-sizing.scss";
+@use "../../../styles/common/mixins/flexbox.scss";
+
+.StudyLiterature {
+  @include flexbox.horizontal();
+  width: 200%;
+  height: 500px;
+  overflow-x: hidden;
+  position: relative;
+  animation: goRight 5s;
+
+  .StudyLiterature__FrontContainer {
+    @include page-sizing.safe-wrapper;
+    background-color: blue;
+    position: relative;
+  }
+
+  .StudyLiterature__RightContainer {
+    @include page-sizing.safe-wrapper;
+    background-color: red;
+  }
+}
+
+.Content {
+  width: 500px;
+  height: 200px;
+  background-color: green;
+}
+
+@keyframes goRight {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 100%;
+  }
+}

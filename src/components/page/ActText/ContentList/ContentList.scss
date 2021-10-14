@@ -1,14 +1,17 @@
 @use "../../../../styles/common/color.scss";
-$half-margin: 30px;
+@use "../../../../styles/common/mixins/page-sizing.scss";
+
+$half-margin: 60px;
 
 .ContentList {
   padding-top: $half-margin * 4;
   padding-bottom: $half-margin * 4;
-
   .Content--Outside {
-    margin-top: $half-margin;
+    margin-top: $half-margin * 2;
     .Content__Title {
+      border-bottom: 2px solid color.$hl-light;
       font-size: 2em;
+      margin-bottom: 0.5em;
       .Content__Title__Colored {
         font-weight: 600;
         color: color.$hl-heavy;
@@ -16,8 +19,25 @@ $half-margin: 30px;
       }
     }
     .Content__Introduction {
+      @include page-sizing.p-container;
+      font-size: 1.5em;
     }
   }
   .Content--Inside {
+    @include page-sizing.p-container(2em);
+    border-top: dashed 2px color.$teal-1;
+    font-size: 1.5em;
+    font-weight: 200;
+    font-style: italic;
+    .Content--Inside__Link {
+      margin-top: 2em;
+      color: color.$hl-heavy;
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+      &:hover {
+        color: color.$hl-light;
+      }
+    }
   }
 }

@@ -1,8 +1,12 @@
 @use "../../../styles/common/mixins/flexbox.scss";
+@use "../../../styles/common/mixins/animation.scss";
 
 .PleaseScrollDown {
   @include flexbox.horizontal(center, center);
+  @include animation.blinkN($count: 2);
   position: fixed;
   width: 100%;
-  bottom: 20px;
+  left: 0;
+  bottom: 3rem;
+  font-size: 1.5rem;
 }

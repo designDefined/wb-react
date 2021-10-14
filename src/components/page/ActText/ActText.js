@@ -3,7 +3,7 @@ import Header from "./Header/Header";
 import Introduction from "./Introduction/Introduction";
 import PleaseScrollDown from "../../common/PleaseScrollDown/PleaseScrollDown";
 import ContentList from "./ContentList/ContentList";
-const ActText = () => {
+const ActText = ({ history }) => {
   return (
     <div className="Page--ActText">
       <div className="HeaderContainer">
@@ -12,7 +12,7 @@ const ActText = () => {
       </div>
       <PleaseScrollDown />
       <div className="ContentListContainer">
-        <ContentList />
+        <ContentList history={history} />
       </div>
     </div>
   );
