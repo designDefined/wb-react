@@ -1,16 +1,19 @@
 import "./App.css";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+//Page Components
+import Home from "./components/page/Home/Home";
+import ActText from "./components/page/ActText/ActText";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/"></Route>
-        <Route></Route>
-        <Route></Route>
+        <Route path="/home" component={Home} exact></Route>
+        <Route path="/act_text" component={ActText} exact></Route>
+        <Redirect to="/act_text"></Redirect>
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
