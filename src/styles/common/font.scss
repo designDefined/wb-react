@@ -1,0 +1,7 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+$basic-font: "Pretendard", sans-serif;
+
+@mixin general($weight: 300) {
+  font-family: $basic-font;
+  font-weight: $weight;
+}
