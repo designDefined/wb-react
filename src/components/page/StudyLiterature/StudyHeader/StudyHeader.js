@@ -6,7 +6,7 @@ const StudyHeader = () => {
   return (
     <div className="StudyHeader">
       <div className="StudyHeader__Navigator">
-        <div className="PrevButton" onClick={() => history.push("/")}>
+        <div className="PrevButton" onClick={() => history.push("/wb-react")}>
           ← 이전으로 돌아가기
         </div>
         <div className="SectionName">발제문</div>

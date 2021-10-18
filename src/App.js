@@ -11,13 +11,13 @@ const App = () => {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         {/* <Route path="/home" component={Home} exact></Route> */}
-        <Route path="/" component={ActText} exact></Route>
+        <Route path="/wb-react" component={ActText} exact></Route>
         <Route
-          path="/study_literature"
+          path="/wb-react/study_literature"
           component={StudyLiterature}
           exact
         ></Route>
-        <Redirect to="/"></Redirect>
+        <Redirect to="/wb-react"></Redirect>
       </Switch>
     </BrowserRouter>
   );
