@@ -1,0 +1,21 @@
+@use "../../../styles/common/mixins/page-sizing.scss";
+@use "../../../styles/common/font.scss";
+.Page--ActText {
+  @include page-sizing.safe-wrapper;
+  @include font.general;
+  @media (min-width: 769px) {
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.HeaderContainer {
+  @include page-sizing.safe-content;
+  height: 100vh;
+}
+
+.ContentListContainer {
+  @include page-sizing.safe-content;
+}

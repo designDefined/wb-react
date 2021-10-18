@@ -1,0 +1,40 @@
+@use "../../../../styles/common/mixins/page-sizing.scss";
+@use "../../../../styles/common/mixins/flexbox.scss";
+@use "../../../../styles/common/color.scss";
+
+.StudyHeader {
+  .StudyHeader__Navigator {
+    font-size: 1.25em;
+    .PrevButton {
+      cursor: pointer;
+      text-decoration: underline;
+      &:hover {
+        color: grey;
+      }
+    }
+    .SectionName {
+      position: absolute;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: lightgrey;
+      top: 4em;
+      left: 1em;
+    }
+  }
+  .StudyHeader__Title {
+    @include flexbox.vertical(center, center);
+    margin-top: 8em;
+    margin-bottom: 8em;
+    h1 {
+      font-size: 8em;
+      font-weight: 100;
+    }
+  }
+  .StudyHeader__Introduction {
+    @include page-sizing.p-container;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: color.$hl-normal;
+  }
+}

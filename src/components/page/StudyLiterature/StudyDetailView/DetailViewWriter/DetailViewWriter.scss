@@ -1,0 +1,17 @@
+@use "../DetailViewCommon.scss";
+@use "../../../../../styles/common/color.scss";
+
+$main-color: color.$yellow;
+
+.DetailViewWriter {
+  width: 100%;
+  background-color: $main-color;
+  text-align: justify;
+  .Work__Header {
+    @include DetailViewCommon.header($main-color);
+  }
+
+  .Work__Content {
+    @include DetailViewCommon.content($main-color);
+  }
+}
