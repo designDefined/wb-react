@@ -4,7 +4,7 @@ const DetailViewWorld = () => {
     <div className="DetailViewWorld">
       <div className="Work__Header">
         <h1>문학계</h1>
-        <h3>활자가 예술이 되는 순간</h3>
+        <h3>사회를 담는 문학, 문학을 담는 사회</h3>
       </div>
       <div className="Work__Content">
         <p className="p-title">1. 문학 그리고 사회</p>

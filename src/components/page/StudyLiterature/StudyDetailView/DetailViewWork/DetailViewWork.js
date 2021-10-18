@@ -5,7 +5,7 @@ const DetailViewWork = () => {
     <div className="DetailViewWork">
       <div className="Work__Header">
         <h1>작품</h1>
-        <h3>활자가 예술이 되는 순간</h3>
+        <h3>흑백의 무늬가 예술이 되는 순간</h3>
       </div>
       <div className="Work__Content">
         <p className="p-title">1. 이것도 문학일까?</p>
