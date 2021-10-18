@@ -5,11 +5,11 @@ const DetailViewWriter = () => {
     <div className="DetailViewWriter">
       <div className="Work__Header">
         <h1>작가</h1>
-        <h3>활자가 예술이 되는 순간</h3>
+        <h3>단어로 영혼의 옷을 짓는 사람들</h3>
       </div>
       <div className="Work__Content">
         <p className="p-title">1. 쓰다 / 창작하다</p>
-        <div className="hl-front p-quote">
+        <div className="hl-back p-quote">
           <div className="quote">
             작가라는 직업을 추천하지는 않지만, 이 말씀은 드리고 싶어요.
             <br />쓸 사람은 써야 한다.
