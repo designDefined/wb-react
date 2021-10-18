@@ -1,37 +1,76 @@
 @use "../../../styles/common/mixins/page-sizing.scss";
 @use "../../../styles/common/mixins/flexbox.scss";
+@use "../../../styles/common/font.scss";
 
-.StudyLiterature {
-  @include flexbox.horizontal();
-  width: 200%;
-  height: 500px;
-  overflow-x: hidden;
+.Page--StudyLiterature {
+  @include font.general;
   position: relative;
-  animation: goRight 5s;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .css3d-container {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+  }
+
+  .css3d-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-origin: right center;
+    transform: translateX(0) rotateY(0);
+  }
+  .css3d-right {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-origin: left center;
+    transform: translateX(0) rotateY(-90deg);
+  }
+
+  &.StudyLiterature-right {
+    .css3d-front {
+      transform: translateX(-100%) rotateY(90deg);
+    }
+    .css3d-right {
+      transform: translateX(-100%) rotateY(0deg);
+    }
+  }
 
   .StudyLiterature__FrontContainer {
     @include page-sizing.safe-wrapper;
-    background-color: blue;
+    width: 100%;
+    height: 100%;
     position: relative;
+    overflow-y: auto;
+
+    .StudyLiterature__HeaderContainer {
+      @include page-sizing.safe-content;
+    }
+
+    .StudyLiterature__Footer {
+      @include flexbox.horizontal(center, center);
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 4em;
+    }
   }
 
   .StudyLiterature__RightContainer {
     @include page-sizing.safe-wrapper;
-    background-color: red;
-  }
-}
-
-.Content {
-  width: 500px;
-  height: 200px;
-  background-color: green;
-}
-
-@keyframes goRight {
-  from {
-    right: 0%;
-  }
-  to {
-    right: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: 1000px;
+    overflow-y: auto;
+    .StudyLiterature__DetailViewContainer {
+      @include page-sizing.safe-content;
+    }
   }
 }
