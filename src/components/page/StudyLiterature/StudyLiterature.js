@@ -4,10 +4,6 @@ import StudyNodeMap from "./StudyNodeMap/StudyNodeMap";
 import StudyHeader from "./StudyHeader/StudyHeader";
 import StudyDetailView from "./StudyDetailView/StudyDetailView";
 import StudyNavBar from "./StudyNavBar/StudyNavBar";
-<<<<<<< HEAD
-=======
-import { useEffect } from "react";
->>>>>>> b54d797b46b96917e8e9ed2bcf2ec3c8d6aefc77
 import { useRef } from "react";
 const StudyLiterature = () => {
   const [isRight, setIsRight] = useState(false);
