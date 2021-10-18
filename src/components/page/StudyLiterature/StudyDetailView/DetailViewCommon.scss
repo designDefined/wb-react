@@ -1,0 +1,66 @@
+@use "../../../../styles/common/mixins/flexbox.scss";
+@use "../../../../styles/common/mixins/page-sizing.scss";
+
+@mixin header($col: black) {
+  @include flexbox.vertical(center, center);
+  color: white;
+  background-color: $col;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  h1 {
+    font-weight: 600;
+    font-size: 6em;
+  }
+  h3 {
+    font-weight: 200;
+    font-size: 1.5em;
+    font-style: italic;
+  }
+}
+
+@mixin content($col: black) {
+  @include page-sizing.p-container(2em);
+  color: black;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 1.5em;
+  p {
+    text-indent: 1em;
+    line-height: 1.25em;
+  }
+
+  .p-title {
+    font-weight: 700;
+  }
+  .p-nextTitle {
+    margin-top: 3em;
+    font-weight: 700;
+  }
+  .p-quote {
+    @include flexbox.vertical($sub-axis: center);
+    width: 100%;
+    padding: 1em;
+    .quote {
+      font-size: 1.25em;
+      font-weight: 600;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+    .author {
+      font-size: 0.75em;
+      text-align: end;
+    }
+  }
+  .hl-front {
+    display: inline-block;
+    color: $col;
+    font-weight: 600;
+  }
+  .hl-back {
+    display: inline-block;
+    color: white;
+    background-color: $col;
+  }
+}

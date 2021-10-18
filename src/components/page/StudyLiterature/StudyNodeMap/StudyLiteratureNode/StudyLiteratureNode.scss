@@ -1,0 +1,33 @@
+@use "../../../../../styles/common/mixins/flexbox.scss";
+@use "../../../../../styles/common/color.scss";
+
+@mixin colorize($col: grey) {
+  border: 2px solid $col;
+  color: $col;
+  background-color: white;
+  &:hover {
+    color: white;
+    background-color: $col;
+  }
+}
+
+.StudyLiteratureNode {
+  @include flexbox.horizontal(center, center);
+  @include colorize();
+  width: 4em;
+  height: 4em;
+  font-size: 2.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &.style-blue {
+    @include colorize(color.$indigo);
+  }
+  &.style-yellow {
+    @include colorize(color.$yellow);
+  }
+  &.style-green {
+    @include colorize(color.$green);
+  }
+}
