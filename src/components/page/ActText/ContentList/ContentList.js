@@ -29,7 +29,7 @@ const ContentList = ({ history }) => {
           </p>
           <div
             className="Content--Inside__Link"
-            onClick={() => history.push("act_text/study_literature")}
+            onClick={() => history.push("/study_literature")}
           >
             문학 편 보러가기
           </div>
