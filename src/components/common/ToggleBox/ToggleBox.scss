@@ -5,11 +5,11 @@
   .ToggleBox__Show {
     cursor: pointer;
     &:hover {
-      opacity: 0.8;
+      opacity: 0.5;
     }
   }
   .ToggleBox__Icon {
-    @include animation.blink;
+    // @include animation.blink;
     font-weight: 700;
     position: absolute;
     color: grey;
@@ -19,6 +19,6 @@
   }
 
   .ToggleBox__Hide {
-    @include animation.appear;
+    // @include animation.appear;
   }
 }

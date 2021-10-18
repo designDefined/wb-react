@@ -4,8 +4,8 @@
 $half-margin: 60px;
 
 .ContentList {
-  padding-top: $half-margin * 4;
-  padding-bottom: $half-margin * 4;
+  // padding-top: $half-margin * 1;
+  padding-bottom: $half-margin * 2;
   .Content--Outside {
     margin-top: $half-margin * 2;
     .Content__Title {
